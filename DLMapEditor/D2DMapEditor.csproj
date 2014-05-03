@@ -1,0 +1,146 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7A43E6CF-3FF7-4235-B63A-9650E632BCAC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>D2DMapEditor</RootNamespace>
+    <AssemblyName>D2DMapEditor</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutD2DMapEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutD2DMapEditor.Designer.cs">
+      <DependentUpon>AboutD2DMapEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExportMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportMap.Designer.cs">
+      <DependentUpon>ExportMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\CodesDictionary.cs" />
+    <Compile Include="Tool\CodesGenerator.cs" />
+    <Compile Include="Tool\EditingTool.cs" />
+    <Compile Include="Tool\InputHelper.cs" />
+    <Compile Include="Utilities\Clipboard.cs" />
+    <Compile Include="Utilities\ClipboardNode.cs" />
+    <Compile Include="LayerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilities\CustomCursor.cs" />
+    <Compile Include="D2DMapEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="D2DMapEditor.Designer.cs">
+      <DependentUpon>D2DMapEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\History.cs" />
+    <Compile Include="Utilities\HistoryNode.cs" />
+    <Compile Include="Graphics\Layer.cs" />
+    <Compile Include="Graphics\Map.cs" />
+    <Compile Include="MapSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapSetup.Designer.cs">
+      <DependentUpon>MapSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilities\MapInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutD2DMapEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutD2DMapEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="D2DMapEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>D2DMapEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportMap.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ExportMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapSetup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MapSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TilesEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TilesEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MapManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool\SelectionTool.cs" />
+    <Compile Include="Graphics\Tile.cs" />
+    <Compile Include="Graphics\TileNode.cs" />
+    <Compile Include="TilesEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TilesEditor.Designer.cs">
+      <DependentUpon>TilesEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\TilesManagement.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
